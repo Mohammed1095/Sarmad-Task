@@ -1,0 +1,140 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px black inset !important;
+  -webkit-text-fill-color: white !important;
+  border-bottom: #00acb1 1px solid;
+  z-index: 1;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background: black;
+
+  border-radius: 15px;
+}
+.typewriter__cursor {
+  color: #00acb1;
+}
+.typewriter__wrapper {
+  display: inline-block;
+}
+/* Track */
+
+/* Handle */
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px;
+}
+.react-select__multi-value {
+  background-color: #00acb1 !important;
+  border-radius: 0;
+}
+.react-select__multi-value__label {
+  color: white !important;
+}
+
+/* Handle on hover */
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #2e2e31;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.scrollbar {
+  scrollbar-color: #2e2e31;
+  scrollbar-width: thin;
+}
+
+.dropdown_scrollbar::-webkit-scrollbar-track {
+  background: #141618;
+}
+.dropdown_scrollbar::-webkit-scrollbar-thumb {
+  margin-right: 5px;
+  background: #656f77;
+  border-radius: 15px;
+}
+
+.dropdown_scrollbar::-webkit-scrollbar {
+  background: #2e2e31;
+  width: 8px;
+  height: 8px;
+}
+
+.dropdown_scrollbar {
+  scrollbar-color: #2e2e31;
+  scrollbar-width: thin;
+}
+.modal_scrollbar::-webkit-scrollbar-track {
+  background: #141618;
+  border-radius: 15px;
+}
+
+/* Track */
+
+/* Handle */
+.modal_scrollbar::-webkit-scrollbar-thumb {
+  background-color: #00acb1;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.modal_scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #00acb1;
+}
+
+.modal_scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modal_scrollbar {
+  scrollbar-color: #00acb1;
+  scrollbar-width: thin;
+}
+
+.js-focus-visible :focus:not(.focus-visible),
+.js-focus-visible :focus:not(.focus-visible) + [data-focus] {
+  outline: none;
+  box-shadow: none;
+}
+:focus {
+  box-shadow: none !important;
+}
+
+[data-focus] {
+  box-shadow: none !important;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+input[type="month"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+body {
+  letter-spacing: 0px;
+}
+
+.firstLetter {
+  text-transform: capitalize;
+  display: block;
+}

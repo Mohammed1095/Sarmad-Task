@@ -49,9 +49,9 @@ const InputWithLabel = forwardRef(
         position="relative"
       >
         <FormLabel
-          textColor={error ? "red.700" : "black"}
-          fontWeight="900"
-          fontSize={["16px", "16px", "16px", "24px"]}
+          textColor={error ? "red.700" : "#282828"}
+          fontWeight="600"
+          fontSize={["1rem", "1rem", "1rem", "1.25rem"]}
         >
           {title} {required ? "*" : ""}
         </FormLabel>
@@ -67,15 +67,19 @@ const InputWithLabel = forwardRef(
           )}
           <Input
             transition="all 0.5s"
-            color="#000000"
+            color="gray.800"
             borderRadius="0px"
             disabled={disabled}
-            fontSize={["16px", "16px", "16px", "24px"]}
+            fontSize="1rem"
             _invalid={{
               borderColor: "#D82C4B",
             }}
             placeholder={placeholder || title}
-            _placeholder={{ color: "#000000", opacity: "0.5" }}
+            _placeholder={{
+              color: "#000000",
+              opacity: "0.3",
+              fontSize: "1rem",
+            }}
             variant="flushed"
             onChange={(e) => {
               if (onChange) {

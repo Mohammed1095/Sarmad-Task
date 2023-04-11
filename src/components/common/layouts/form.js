@@ -1,18 +1,20 @@
-import { VStack, Text } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 const Form = ({ children, title }) => {
   return (
     <VStack
-      alignItems="left"
+      alignItems="center"
       spacing="0px"
-      justifyContent={["end", "end", "end", "end", "end", "center"]}
-      width={["100%", "100%", "100%", "40%"]}
+      px="0.1rem"
+      margin="auto"
+      marginBottom="2rem"
+      justifyContent={["end", "end", "end", "end", "end", "space-between"]}
+      width={["100%", "100%", "100%", "50%"]}
+      bg="#fff"
+      borderRadius="2rem"
     >
-      <Text fontWeight="bold" fontSize={["lg", "xl", "xl", "xl", "xl", "3xl"]}>
-        {title}
-      </Text>
       <VStack
-        alignItems="left"
-        spacing="40px"
+        alignItems="center"
+        spacing="2.5rem"
         justifyContent={["end", "end", "end", "end", "end", "center"]}
         width={["100%", "100%", "100%", "100%"]}
       >

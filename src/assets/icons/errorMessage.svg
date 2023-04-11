@@ -1,0 +1,7 @@
+<svg id="Component_1_1" data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <circle id="errorMessage" cx="15" cy="15" r="15" fill="#d82c4b"/>
+  <g id="X" transform="translate(9.57 9.556)">
+    <line id="Line_1" data-name="Line 1" x1="7" y2="7" transform="translate(1.53 1.444)" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <line id="Line_2" data-name="Line 2" x2="7" y2="7" transform="translate(1.43 1.502)" fill="none" stroke="#fff" stroke-width="1.5"/>
+  </g>
+</svg>

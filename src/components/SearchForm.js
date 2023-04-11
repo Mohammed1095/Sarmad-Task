@@ -15,8 +15,10 @@ import {
 import InputWithLabel from "../components/common/SharedComponents/Input/InputWithLabel";
 import SearchLayout from "../components/common/layouts/searchLayout";
 import Form from "../components/common/layouts/form";
+import useAlert from "../helpers/hooks/useAlert";
 
 const SearchForm = () => {
+  const { showAlert } = useAlert();
   const [searchResults, setSearchResults] = useState([]);
   const [searchQuery, setSearchQuery] = useState({
     fname: "",
@@ -46,69 +48,81 @@ const SearchForm = () => {
       );
 
       setSearchResults(response.data);
+      showAlert({
+        type: "success",
+        title: "Successful search results",
+        body: `Your search results is here`,
+      });
     } catch (error) {
-      console.error(error);
+      showAlert({
+        type: "error",
+        title: "Something went wrong",
+        body: `${error.message}`,
+      });
     }
   };
 
   return (
-    <Box width="100%" margin="auto" bg="gray.500">
+    <Box width="100%" paddingTop="2rem" bg="gray.200">
       <form onSubmit={handleSubmit}>
-        <SearchLayout>
-          <Form title="Fill in to search ...">
-            <Grid
-              templateColumns={{ sm: "100%", md: "repeat(2, 47%)" }}
-              px={{ sm: "30px", md: "0" }}
-              gap={20}
-              mt="10"
-              paddingBottom="20"
-              alignItems={["center", "center", "center", "end"]}
-              justifyItems={["center", "center", "center", "start"]}
+        <Form title="Fill in to search ...">
+          <Grid
+            templateColumns={{ sm: "100%", md: "repeat(2, 1fr)" }}
+            px={{ sm: "2rem", md: "0" }}
+            gap={20}
+            py="20"
+            px="10"
+            alignItems={["center", "center", "center", "end"]}
+            justifyItems={["center", "center", "center", "start"]}
+          >
+            <InputWithLabel
+              title="First name"
+              type="text"
+              name="fname"
+              value={searchQuery.fname}
+              onChange={handleInputChange}
+              required
+            />
+            <InputWithLabel
+              title="Middle name"
+              type="text"
+              name="mname"
+              value={searchQuery.mname}
+              onChange={handleInputChange}
+              required
+            />
+            <InputWithLabel
+              title="Last name"
+              type="text"
+              name="lname"
+              value={searchQuery.lname}
+              onChange={handleInputChange}
+              required
+            />
+            <InputWithLabel
+              title="Nationality"
+              type="text"
+              name="nat"
+              value={searchQuery.nat}
+              onChange={handleInputChange}
+              required
+            />
+            <Button
+              type="submit"
+              mt={4}
+              bg="#00acb1"
+              color="#fff"
+              letterSpacing="0.15rem"
+              borderRadius="0.5rem"
+              _hover={{ bg: "#99dee0", color: "#666666" }}
+              fontSize="1rem"
+              fontWeight="600"
+              width="100%"
             >
-              <InputWithLabel
-                title="First name"
-                type="text"
-                name="fname"
-                value={searchQuery.fname}
-                onChange={handleInputChange}
-                required
-              />
-              <InputWithLabel
-                title="Middle name"
-                type="text"
-                name="mname"
-                value={searchQuery.mname}
-                onChange={handleInputChange}
-                required
-              />
-              <InputWithLabel
-                title="Last name"
-                type="text"
-                name="lname"
-                value={searchQuery.lname}
-                onChange={handleInputChange}
-                required
-              />
-              <InputWithLabel
-                title="Nationality"
-                type="text"
-                name="nat"
-                value={searchQuery.nat}
-                onChange={handleInputChange}
-                required
-              />
-              <Button
-                type="submit"
-                mt={4}
-                fontSize="16px"
-                fontWeight="900"
-                width="100%"
-              >
-                Search
-              </Button>
-            </Grid>
-          </Form>
-        </SearchLayout>
+              Search
+            </Button>
+          </Grid>
+        </Form>
       </form>
 
       {searchResults?.screen_result?.length ? (
@@ -117,6 +131,7 @@ const SearchForm = () => {
           overflowX="scroll"
           className="scrollbar"
           position="relative"
+          marginTop="3rem"
         >
           <Table width="93%" mt="2rem" margin="auto">
             <Thead>

@@ -7,7 +7,7 @@ const Form = ({ children, title }) => {
       justifyContent={["end", "end", "end", "end", "end", "center"]}
       width={["100%", "100%", "100%", "40%"]}
     >
-      <Text fontWeight="bold" fontSize={["lg", "xl", "xl", "xl", "xl", "2xl"]}>
+      <Text fontWeight="bold" fontSize={["lg", "xl", "xl", "xl", "xl", "3xl"]}>
         {title}
       </Text>
       <VStack

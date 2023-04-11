@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
 import {
-  Image,
   Box,
   Text,
   Grid,
@@ -13,7 +12,6 @@ import {
   Th,
   Td,
 } from "@chakra-ui/react";
-import formImage from "../assets/images/fillForm.svg";
 import InputWithLabel from "../components/common/SharedComponents/Input/InputWithLabel";
 import SearchLayout from "../components/common/layouts/searchLayout";
 import Form from "../components/common/layouts/form";
@@ -57,11 +55,6 @@ const SearchForm = () => {
     <Box width="100%" margin="auto" bg="gray.500">
       <form onSubmit={handleSubmit}>
         <SearchLayout>
-          <Image
-            display={["none", "none", "none", "block"]}
-            src={formImage}
-            alt="company"
-          />
           <Form title="Fill in to search ...">
             <Grid
               templateColumns={{ sm: "100%", md: "repeat(2, 47%)" }}
@@ -125,7 +118,7 @@ const SearchForm = () => {
           className="scrollbar"
           position="relative"
         >
-          <Table width="93%" mt="2rem">
+          <Table width="93%" mt="2rem" margin="auto">
             <Thead>
               <Tr
                 fontSize={[

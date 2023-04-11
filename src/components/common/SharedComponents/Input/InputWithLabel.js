@@ -75,7 +75,7 @@ const InputWithLabel = forwardRef(
               borderColor: "#D82C4B",
             }}
             placeholder={placeholder || title}
-            _placeholder={{ color: "#CDD9E3", opacity: "0.5" }}
+            _placeholder={{ color: "#000000", opacity: "0.5" }}
             variant="flushed"
             onChange={(e) => {
               if (onChange) {
